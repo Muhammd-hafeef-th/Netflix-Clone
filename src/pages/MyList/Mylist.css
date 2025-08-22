@@ -1,0 +1,243 @@
+.netflix-mylist-container {
+  padding-top: 150px;
+  min-height: calc(100vh - 140px); 
+  background-color: #141414;
+  color: white;
+  padding: 20px 40px;
+}
+
+.mylist-content {
+  max-width: 1200px;
+  padding-top: 70px;
+  padding-left: 4% ;
+  margin: 0 auto;
+}
+
+.mylist-header {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #333;
+}
+
+.mylist-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.list-count {
+  color: #aaa;
+  font-size: 16px;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.movie-card {
+  background: #181818;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  z-index: 2;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+.movie-poster {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 2/3;
+}
+
+.movie-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.movie-card:hover .movie-overlay {
+  opacity: 1;
+}
+
+.play-button, .remove-button {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.play-button:hover {
+  background: white;
+}
+
+.remove-button {
+  background: rgba(109, 109, 110, 0.7);
+}
+
+.remove-button:hover {
+  background: rgba(109, 109, 110, 0.9);
+}
+
+.play-button i, .remove-button i {
+  font-size: 14px;
+}
+
+.remove-button i {
+  color: white;
+}
+
+.movie-info {
+  padding: 12px;
+}
+
+.movie-rating {
+  color: #46d369;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.movie-year {
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.movie-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-description {
+  color: #d2d2d2;
+  font-size: 14px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .netflix-mylist-container {
+    padding: 20px;
+    margin-top: 60px;
+  }
+  
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
+  }
+  
+  .mylist-header h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .netflix-mylist-container {
+    padding: 15px;
+  }
+  
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+  
+  .movie-info {
+    padding: 8px;
+  }
+  
+  .movie-title {
+    font-size: 14px;
+  }
+  
+  .movie-description {
+    font-size: 12px;
+    -webkit-line-clamp: 2;
+  }
+}
+.empty-watchlist {
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.empty-icon {
+  margin-bottom: 1.5rem;
+}
+
+.empty-icon svg {
+  width: 6rem;
+  height: 6rem;
+  color: #d1d5db;
+}
+
+.empty-title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.empty-description {
+  color: #9ca3af;
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.empty-browse-button {
+  background-color: #e50914;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.empty-browse-button:hover {
+  background-color: #ff0000;
+  box-shadow: 0 4px 8px rgba(229, 9, 20, 0.3);
+}
